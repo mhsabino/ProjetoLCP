@@ -285,8 +285,12 @@ public class RolDeServicos implements java.io.Serializable {
      * @param v representacao estruturada com das
      */
     public void removeServico(Servico v) {
-        if (servicos.contains(v))
+        if (servicos.contains(v)){
             servicos.remove(v);
+             System.out.print("removeu!!!");
+        }
+        else
+            System.out.print("Não removeu!!!");
     }
     
     /**

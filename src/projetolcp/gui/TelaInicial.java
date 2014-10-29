@@ -6,10 +6,8 @@
 
 package projetolcp.gui;
 
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -32,25 +30,24 @@ public class TelaInicial {
     private Container painelDeConteudo;
     private static final int LARGURA_JANELA = 800;
     private static final int ALTURA_JANELA  = 600;
+    private PainelDeServico painelServico = new PainelDeServico();
     
     public TelaInicial(){
         constroiJanela("Lavanderia");
         criaTelaInicial();
     }
     
-    private void centralizaTela() {
+   /* private void centralizaTela() {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         janela.setLocation(dim.width/2-LARGURA_JANELA/2, dim.height/2-ALTURA_JANELA/2);         
-    }
+    }*/
     
     private void constroiJanela(String nomeJanela){
         janela = new JFrame(nomeJanela);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.setPreferredSize(new Dimension(LARGURA_JANELA,ALTURA_JANELA));
-        janela.setLocationRelativeTo(null);
         janela.setResizable(false);
         painelDeConteudo = janela.getContentPane();
-        centralizaTela();
         constroiBarraDeMenu();
     }
     
@@ -61,6 +58,7 @@ public class TelaInicial {
         label.setPreferredSize(new Dimension(LARGURA_JANELA,ALTURA_JANELA));
         painelDeConteudo.add(label);
         janela.pack();
+        janela.setLocationRelativeTo(null);
         janela.setVisible(true);
     }
     
@@ -84,7 +82,7 @@ public class TelaInicial {
         menuItemTiposServicos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                mudaTela(new PainelDeServico());
+                mudaTela(painelServico);
             }
         });
         

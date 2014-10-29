@@ -4,27 +4,15 @@
  */
 package projetolcp.gui;
 
-import java.awt.Dialog;
 import java.awt.Dimension;
-import java.awt.Toolkit;
-import javax.swing.JDialog;
 
 /**
  *
  * @author Mateus
  */
-public class TelaDeAlterarPrecoDeServico extends JDialog{
+public class TelaDeAlterarPrecoDeServico extends TelaJDialog{
     
-    public TelaDeAlterarPrecoDeServico(){
-        setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
-        setTitle("Alterar Preço de Serviço");
-        setPreferredSize(new Dimension(400,400));
-        setLocationRelativeTo(null);
-        setResizable(false);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        setLocation(dim.width/2-400/2, dim.height/2-400/2);   
-        pack();
-        setVisible(true);
+    public TelaDeAlterarPrecoDeServico(Dimension dimensaoJanela, String tituloJanela){
+        super(dimensaoJanela, tituloJanela);
     }
-    
 }
