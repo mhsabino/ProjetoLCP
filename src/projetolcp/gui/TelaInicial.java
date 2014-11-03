@@ -37,11 +37,6 @@ public class TelaInicial {
         criaTelaInicial();
     }
     
-   /* private void centralizaTela() {
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        janela.setLocation(dim.width/2-LARGURA_JANELA/2, dim.height/2-ALTURA_JANELA/2);         
-    }*/
-    
     private void constroiJanela(String nomeJanela){
         janela = new JFrame(nomeJanela);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

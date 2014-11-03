@@ -21,9 +21,10 @@ public class TelaJDialog extends JDialog {
         setTitle(tituloJanela);
         setPreferredSize(dimensao);
         setResizable(false);
+        setVisible(true);           
         pack();
         setLocationRelativeTo(null);
-        setVisible(true);        
+     
     }
     
 }
